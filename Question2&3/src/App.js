@@ -28,14 +28,10 @@ function App() {
 
                         <p className="text-small">
                             HTML stands for HyperText Markup Language. It is used to design web pages using a markup
-                            language.
-                            HTML is the combination of Hypertext and Markup language. Hypertext defines the link between
-                            the web
-                            pages. A markup language is used to define the text document within tag which defines the
-                            structure of
-                            web pages. HTML is a markup language that is used by the browser to manipulate text, images,
-                            and other
-                            content to display it in the required format.
+                            language. HTML is the combination of Hypertext and Markup language. Hypertext defines the
+                            link between the web pages. A markup language is used to define the text document within tag
+                            which defines the structure of web pages. HTML is a markup language that is used by the
+                            browser to manipulate text, images, and other content to display it in the required format.
                         </p>
 
 
@@ -51,12 +47,9 @@ function App() {
                         </h1>
                         <p className="text-small">
                             C is a procedural programming language. It was initially developed by Dennis Ritchie as a
-                            system programming
-                            language to write operating system. The main features of C language include low-level access
-                            to memory, simple set
-                            of keywords, and clean style, these features make C language suitable for system programming
-                            like operating system
-                            or compiler development.
+                            system programming language to write operating system. The main features of C language
+                            include low-level access to memory, simple set of keywords, and clean style, these features
+                            make C language suitable for system programming like operating system or compiler development.
                         </p>
 
                     </div>

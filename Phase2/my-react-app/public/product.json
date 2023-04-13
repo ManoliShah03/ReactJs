@@ -1,0 +1,73 @@
+[
+  {
+    "id": "1",
+    "name": "Wireless Earbuds",
+    "description": "These wireless earbuds offer high-quality sound and come with a portable charging case.",
+    "price": 49.99,
+    "image": "images/image7.jpg"
+
+  },
+
+  {
+    "id": "2",
+    "name": "Honor MagicBook 14",
+    "description": "Honor Magicbook 14 has a Premium Aluminium Metal Body, weight of laptop is only 1.38kg.",
+    "price": 50000,
+    "image": "images/image8.jpeg"
+
+  },
+
+  {
+    "id": "3",
+    "name": "Van Heusen",
+    "description": "Easy Stain Release: This technology helps easy release of tough stains from t-shirts.",
+    "price": 545,
+    "image": "images/image9.jpeg"
+
+  },
+  {
+    "id": "4",
+    "name": "Apple iPhone 14 Plus ",
+    "description": "6.95 cm Super Retina XDR display. Advanced camera system for better photos in any light.",
+    "price": 114999,
+    "image": "images/image10.jpg"
+
+  },
+
+  {
+    "id": "5",
+    "name": "Women's Cotton Shirt",
+    "description": " Care Instructions: Hand Wash Only Fit Type: Regular Fit Type Item Weight: 400g" ,
+    "price": 400,
+    "image": "images/image15.jpg"
+
+  },
+
+  {
+    "id": "6",
+    "name": "Wireless Earbuds",
+    "description": "These wireless earbuds offer high-quality sound and come with a portable charging case.",
+    "price": 3000,
+    "image": "images/image13.jpg"
+
+  },
+
+  {
+    "id": "7",
+    "name": "Women's Black Shirt",
+    "description": "Care Instructions: Hand Wash Only Fit Type: Regular Fit Type Item Weight: 400g ",
+
+    "price": 800,
+    "image": "images/image14.jpg"
+
+  },
+
+  {
+    "id": "8",
+    "name": "Samsung Galaxy M13",
+    "description": "6000mAh lithium-ion battery, 1 year manufacturer warranty for device and in box accessories",
+    "price": 12000,
+    "image": "images/image16.jpg"
+
+  }
+]

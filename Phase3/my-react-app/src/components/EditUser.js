@@ -22,7 +22,7 @@ function EditUser() {
             .then(function (response) {
                 console.log(response.data);
                 setInputs(response.data[0]);
-            
+                /*console.log(inputs);*/
             })
             .catch(function (error) {
                 console.log(error);

@@ -4,15 +4,13 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 header('Access-Control-Allow-Origin: *');
+
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Methods: *');
-
 
 $objDb = new DbConnect;
 
 $conn = $objDb->connect();
-// var_dump($conn);
-// exit;
 
 $method = $_SERVER['REQUEST_METHOD'];
 
@@ -20,10 +18,10 @@ switch ($method) {
     case "GET":
         $sql = "SELECT * FROM `contact`";
         $path = explode('/', $_SERVER['REQUEST_URI']);
-        if (isset($path[5]) && is_numeric($path[5])) {
+        if (isset($path[7]) && is_numeric($path[7])) {
             $sql .= "WHERE id = :id";
             $stm = $conn->prepare($sql);
-            $stm->bindParam(':id', $path[5]);
+            $stm->bindParam(':id', $path[7]);
             $stm->execute();
             $users = $stm->fetchAll(PDO::FETCH_ASSOC);
         } else {
@@ -48,7 +46,6 @@ switch ($method) {
             $stm->bindParam(':email', $email);
             $stm->bindParam(':mobile', $mobile, PDO::PARAM_INT);
 
-
             if ($stm->execute()) {
                 $response = ["status" => "true", "message" => "Data Created Successfully."];
             } else {
@@ -61,6 +58,7 @@ switch ($method) {
         }
         break;
 
+
     case "PUT":
         $user = json_decode(file_get_contents('php://input'));
 
@@ -68,12 +66,14 @@ switch ($method) {
         $sql = "UPDATE `contact` SET `id`=:id,`name`=:name,`email`=:email,`mobile`=:mobile WHERE `id`=:id";
         $stm = $conn->prepare($sql);
 
-        $id = $user->id;
+
+
+        // $id = $user->id;
         $name = $user->name;
         $email = $user->email;
         $mobile = !empty($user->mobile) ? $user->mobile : '1234567890';
-
-        $stm->bindParam("id", $id);
+        $path = explode('/', $_SERVER['REQUEST_URI']);
+        $stm->bindParam(":id", $path[7]);
         $stm->bindParam(':name', $name);
         $stm->bindParam(':email', $email);
         $stm->bindParam(':mobile', $mobile, PDO::PARAM_INT);
@@ -98,7 +98,7 @@ switch ($method) {
         $stm->bindParam(':id', $id);
 
         if ($stm->execute()) {
-            $response = ["status" => "true", "message" => "Data Deleted Successfully." . "id" ];
+            $response = ["status" => "true", "message" => "Data Deleted Successfully." . "id"];
         } else {
             $response = ["status" => "false", "message" => "Failed to delete Record."];
         }
@@ -110,4 +110,3 @@ switch ($method) {
         echo json_encode($response);
         break;
 }
-?>

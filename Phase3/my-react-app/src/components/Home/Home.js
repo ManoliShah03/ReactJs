@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ListUser from "../ListUser";
+import './Home.css';
 
 
 function Home(props){
@@ -20,11 +21,11 @@ function Home(props){
     }, [email, name]);
 
     return (
-        <>
-            <div className={'container'}>
+        
+            <div className={'home-container'}>
                 <div><h2>{email ? `Welcome   ${name}` : "Login please"}</h2></div>
                 {!name &&
-                    <div className={'container-auth-none'}>
+                    <div className={'container-auth'}>
                         <div>
                             <span>
                                 <Link to={"/Login"}>Login</Link>
@@ -38,9 +39,9 @@ function Home(props){
                 {name && (
                     <div className={'container-auth'}>
                         <h1>React CRUD Operation using PHP API and ReactJs</h1>
-                        <nav className="nav-menu">
-                            <ul className="nav-list">
-                                <li className="nav-item">
+                        <nav className="home-nav-menu">
+                            <ul className="home-nav-list">
+                                <li className="home-nav-item">
                                     <Link to={"/create"} className="nav-link">Create Contact</Link>
                                 </li>
                             </ul>
@@ -49,7 +50,7 @@ function Home(props){
                     </div>
                 )}
             </div>
-        </>
+     
     )
 }
 

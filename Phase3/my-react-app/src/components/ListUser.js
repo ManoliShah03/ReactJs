@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import './ListUser.css';
 
 
 function ListUser() {
@@ -12,7 +12,7 @@ function ListUser() {
     }, []);
 
     function getUsers() {
-        axios.get('http://localhost:80/Projects/React/ReactJs/Phase3/phase-backend/index.php').then(function(response) {
+        axios.get('http://localhost/Projects/React/ReactJs/Phase3/phase-backend/index.php').then(function(response) {
             console.log(response.data);
             setContacts(response.data);
         });
@@ -23,7 +23,7 @@ function ListUser() {
         const valid = window.confirm('Do you  Want to Delete ?');
         if(valid) {
 
-            axios.delete(`http://localhost:80/Projects/React/ReactJs/Phase3/phase-backend/index.php/delete?id=${id}`)
+            axios.delete(`http://localhost/Projects/React/ReactJs/Phase3/phase-backend/index.php/delete?id=${id}`)
                 .then(function (response) {
                     getUsers();
                 });

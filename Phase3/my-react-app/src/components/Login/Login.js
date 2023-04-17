@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../../firebase";
-
+import './Login.css';
 
 function Login() {
 
@@ -48,11 +48,11 @@ function Login() {
     }
 
     return (
-        <>
+       
 
-            <div className={'login-container'}>
+            <div className={'signup-cont'}>
 
-                <div className={'innerBox'}>
+                <div className={'sign-innerBox'}>
                     <h1 className={'heading'}>Login</h1>
 
                     <input
@@ -85,7 +85,7 @@ function Login() {
                     </div>
                 </div>
             </div>
-        </>
+     
     )
 }
 

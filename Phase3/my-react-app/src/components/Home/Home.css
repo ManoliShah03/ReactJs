@@ -1,0 +1,40 @@
+/* Home.css */
+.home-container {
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+  }
+  
+  .container-auth {
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .home-nav-menu {
+    margin-top: 20px;
+  }
+  
+  .home-nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .home-nav-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  

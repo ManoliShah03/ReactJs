@@ -21,7 +21,7 @@ function CreateUser() {
         e.preventDefault();
         const valid = await validationForm();
         if (valid) {
-            axios.post("http://localhost:80/Projects/React/ReactJs/Phase3/phase-backend/index.php", formData)
+            axios.post("http://localhost/Projects/React/ReactJs/Phase3/phase-backend/index.php", formData)
                 .then(function (response) {
                     console.log(response.data);
                     navigate('/Home');
